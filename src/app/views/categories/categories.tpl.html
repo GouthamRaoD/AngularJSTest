@@ -1,0 +1,20 @@
+<div class="sticky-top" style="top: 80px;">
+  <div class="list-group">
+      <a
+        class="list-group-item list-group-item-action btn"
+        ng-click="setActive(0)"
+		ng-class="{active : selected == 0}"
+        href="/"
+        >All Categories</a>
+      <a 
+		ng-repeat="category in categories()" 
+		ng-click="setActive(category.id)"
+		
+		
+		ng-class="active"
+        class="list-group-item list-group-item-action btn" 
+		>
+        {{ category.name }}
+      </a>
+    </div>
+</div>

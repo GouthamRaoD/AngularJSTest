@@ -23,6 +23,8 @@
 		in command prompt run <npm install>
 	step 4
 		in command prompt run <gulp start>
-	step 3
+	step 5
+		PLEASE ADD the categories.json file in dist folder for the application to run after build.
+	step 6
 		open localhost
 

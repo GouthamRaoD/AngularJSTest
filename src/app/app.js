@@ -2,8 +2,9 @@
     'use strict';
 
     angular.module('app', [
-        'ngRoute'
+        'ngRoute', 'ngTouch','ngAnimate', 'ui.bootstrap', 'ngCookies'
     ]);
+	
 })();
 
 

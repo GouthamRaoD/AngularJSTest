@@ -1,24 +1,26 @@
 
-<div class="row">
-  <div class="col-3" >
-    <categories></categories>
-  </div>
-  <div class="col-9">
-    <div class="row">
-		<div ng-repeat="product in getProducts()">
-			<div class="col">
-				<div class="card" style="width: 18rem;">
-					<img class="card-img-top" style="width: 18rem; height: 12rem;" ng-src="{{product.img}}" alt="{{ product.PromptForDesc }}">
-					<div class="card-body">
-						<h4 class="card-title">{{ product.PromptForDesc }}</h4>
-						<p class="card-text">{{ product.Price }}</p>
-					</div>
-					<div class="card-footer">
-					<a class="btn btn-primary btn-block" href="/product/{{product.ID}}">View Item </a>
-					</div>
-				</div>    
+<div class="container">
+	<div ng-repeat="categories in getProducts()">
+		<h3>{{categories.Category.Desc}}</h3>
+		<hr />
+		<div class="row">
+			<div ng-repeat="prod in categories.Category.Items">
+				<div class="col">
+					<div class="card" style="width: 18rem;">
+						<img class="card-img-top" style="width: 18rem; height: 12rem;" ng-src="{{prod.Item.img}}" alt="{{ prod.Item.PromptForDesc }}">
+						<div class="card-body">
+							<h4 class="card-title">{{ prod.Item.PromptForDesc }}</h4>
+							<p class="card-text">{{ prod.Item.Price }}</p>
+						</div>
+					
+
+<div ng-controller="ProductModelController" class="modal-demo">
+        <button type="button" class="btn btn-primary btn-block" ng-click="open(categories.Category.ID, prod.Item.ID  )">View Item</button>
+    </div>
+					</div>    
+				</div>
 			</div>
 		</div>
-    </div>
+	</div>
   </div>
 </div>

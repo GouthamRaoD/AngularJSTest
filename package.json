@@ -9,9 +9,12 @@
   "author": "Goutham Dhannapuneni",
   "license": "ISC",
   "dependencies": {
-    "angular": "^1.7.2",
-    "angular-route": "^1.7.2",
-    "angular-ui-bootstrap": "^2.5.6",
+    "angular": "^1.7.8",
+    "angular-animate": "^1.7.8",
+    "angular-cookies": "^1.7.8",
+    "angular-route": "^1.7.8",
+    "angular-touch": "^1.7.8",
+    "angular-ui-bootstrap": "^2.5.0",
     "bootstrap": "^4.1.3",
     "font-awesome": "^4.7.0",
     "jquery": "^3.3.1"

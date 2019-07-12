@@ -5,6 +5,7 @@ const browserSync = require('browser-sync').create();
 const image = require('gulp-image');
  
 const scripts = require('./scripts');
+const categories = require('./categories');
 const styles = require('./styles');
 var gutil = require('gulp-util'); 
 
@@ -16,7 +17,7 @@ gulp.task('css', function() {
             stream: true
         }));
 });
- 
+
 gulp.task('js', function() {
     gulp.src(scripts)
         .pipe(uglify())
@@ -51,7 +52,7 @@ gulp.task('html', function() {
 });
  
 gulp.task('build', function() {
-    gulp.start(['css', 'js', 'image', 'fonts', 'html'])
+    gulp.start(['css','js', 'image', 'fonts', 'html'])
 });
  
 gulp.task('browser-sync', function() {

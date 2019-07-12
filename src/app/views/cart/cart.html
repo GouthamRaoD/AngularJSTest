@@ -1,0 +1,28 @@
+
+<div class="container">
+	<h3>Cart</h3>
+	<hr />
+	
+	<div >
+		<table class="table">
+			<thead>
+				<tr>
+					<th class="col">Item</th>
+					<th class="col" class="text-right">Price</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="item in items">
+					<td> {{ item.PromptForDesc }} </td>
+					<td class="text-right">${{ prices[$index] }}</td>
+				</tr>
+				<tr>
+					<td class="text-right"><button class="btn btn-success" disabled>Total : ${{total}}</button></td>
+				</tr>
+				<tr>
+					<td class="text-right"><button class="btn btn-primary" type="button" >CHECK OUT</button></td>
+				</tr>
+			</tbody>
+        </table>
+	</div>
+</div>
